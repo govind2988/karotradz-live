@@ -1,0 +1,6 @@
+{
+  "name": "KaroTradz",
+  "description": "A digital portal connecting verified Indian manufacturers with verified global buyers, calculating real-time landed costs and streamlining export logistics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  /* KaroTradz Brand Colors matched with exact brand styling */
+  --color-brand-orange: #FF5500; /* Energetic bright brand orange */
+  --color-brand-beige: #FFFFFF;  /* Crisp clean white background */
+  --color-editorial-dark: #111111; /* Clean modern charcoal dark */
+  --color-editorial-sand: #F5F5F5; /* Neutral light gray panel background */
+}
+
+/* Base custom styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset for fixed header */
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: var(--font-sans);
+}
+
+:where(input, select, textarea, button) {
+  border-radius: 0.75rem;
+}
+
+/* .rounded-2xl   {
+  border-radius: 0.75rem !important;
+} */
+
+/* Smooth Transitions & Selection Styles */
+::selection {
+  background-color: #FF5500;
+  color: #FFFFFF;
+}
+
+/* Custom scrollbar design */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F5F5F5;
+  border: 2px solid #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5500;
+}
+
+/* Premium PDF Export & Print Styles */
+@media print {
+  /* Hide interactive, floating, and media components */
+  #site-header,
+  #brand-music-controller,
+  button,
+  form,
+  .no-print,
+  iframe {
+    display: none !important;
+  }
+
+  /* Reset layout for print page dimensions */
+  body, html, main {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 12pt !important;
+  }
+
+  /* Optimize section spacing for standard paper layout */
+  section, .py-20, .py-24, .py-16 {
+    padding-top: 1.5cm !important;
+    padding-bottom: 1.5cm !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Ensure text headings have rich contrasts */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Keep table lines and grids sharp */
+  table, tr, td, th {
+    page-break-inside: avoid !important;
+  }
+
+  /* Force background colors and colors to render on modern browsers */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
