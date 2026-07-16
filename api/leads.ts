@@ -41,10 +41,10 @@ export default async function handler(req: any, res: any) {
     const recipient = "info@karotradz.com";
 
     const cc = [
-      "govindaraj.poosamani@karotradz.com",
-       "sales@karotradz.com",
-       "support@karotradz.com",
+     "govindaraj.poosamani@karotradz.com","senthil.durai@karotradz.com","kishan.vaghani@karotradz.com",
     ];
+
+    
 
     const subject = `KaroTradz - New Inquiry: ${
       type === "manufacturer"
